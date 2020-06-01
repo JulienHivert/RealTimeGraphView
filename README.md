@@ -3,6 +3,20 @@ Android code for draw in real time graphs
 
 Android code example showing how to draw one or two graphs in Real time.
 
+In your root build.gradle 
+
+```gradle
+allprojects {
+	repositories {
+		maven { url 'https://jitpack.io' }
+		}
+	}
+```
+
+Add these lines inside your build.gradle (Module: app)
+```gradle
+implementation 'com.github.JulienHivert:RealTimeGraphView:TAG'
+```
 In Your XML 
 ```xml
 <com.jhivert.graphviewlib.GraphView
