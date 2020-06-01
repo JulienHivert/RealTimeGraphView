@@ -18,7 +18,7 @@ class GraphView(context: Context, attributeSet: AttributeSet): View(context, att
     private var yMax: Double = 0.0
     private val mPath: Path = Path()
     private var colorGraphOne = Paint()
-    private var colorGrapSecond = Paint()
+    private var colorGraphSecond = Paint()
 
     init {
         initAttributes(context, attributeSet)
@@ -35,7 +35,7 @@ class GraphView(context: Context, attributeSet: AttributeSet): View(context, att
             isAntiAlias = true
             style = Paint.Style.STROKE
         }
-         colorGrapSecond = Paint().apply {
+         colorGraphSecond = Paint().apply {
             color = a.getColor(R.styleable.GraphView_graphColor_2, 0)
             strokeWidth = stroke
             isAntiAlias = true
@@ -77,7 +77,7 @@ class GraphView(context: Context, attributeSet: AttributeSet): View(context, att
                 } else {
                     mPath.lineTo(currentDataPoint.progress.toCoordX(), currentDataPoint.value.toCoordY() + (stroke / 2))
                 }
-                canvas?.drawPath(mPath, colorGrapSecond)
+                canvas?.drawPath(mPath, colorGraphSecond)
             }
         }
     }
