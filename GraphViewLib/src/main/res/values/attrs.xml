@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="GraphView">
+        <attr name="graphColor_1" format="color"/>
+        <attr name="graphColor_2" format="color"/>
+        <attr name="stroke" format="float"/>
+    </declare-styleable>
+</resources>
