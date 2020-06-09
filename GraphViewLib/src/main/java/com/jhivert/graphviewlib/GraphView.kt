@@ -81,34 +81,31 @@ class GraphView(context: Context, attributeSet: AttributeSet): View(context, att
             }
         }
     }
+
     /**
-     * Search the bitrate max and use it for draw the graph
-     * @param  downloadData
-     *         an object containing the value and the progress of the download speed test
-     *         DataPoint is set inside the SpeedTestFragment class
+     * Search the Ymax and use it for draw the graph
+     * @param  dataPoint is an object containing the value and the progress send by user
      *
      */
-    fun drawFirstGraph(downloadData: DataPoint) {
+    fun drawFirstGraph(dataPoint: DataPoint) {
         // Search the Ymax for redraw the graph
-        if (downloadData.value > yMax) {
-            yMax = downloadData.value
+        if (dataPoint.value > yMax) {
+            yMax = dataPoint.value
         }
-        firstDataSet.add(DataPoint(downloadData.progress, downloadData.value))
+        firstDataSet.add(DataPoint(dataPoint.progress, dataPoint.value))
         invalidate()
     }
 
     /**
-     * Search the bitrate max and use it for draw the graph
-     * @param  uploadData
-     *         an object containing the value and the progress of the upload speed test
-     *         DataPoint is set inside the SpeedTestFragment class
+     * Search the Ymax and use it for draw the graph
+     * @param  dataPoint is an object containing the value and the progress send by user
      *
      */
-    fun drawSecondGraph(uploadData: DataPoint) {
-        if (uploadData.value > yMax) {
-            yMax = uploadData.value
+    fun drawSecondGraph(dataPoint: DataPoint) {
+        if (dataPoint.value > yMax) {
+            yMax = dataPoint.value
         }
-        secondDataSet.add(DataPoint(uploadData.progress, uploadData.value))
+        secondDataSet.add(DataPoint(dataPoint.progress, dataPoint.value))
         invalidate()
     }
 
