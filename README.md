@@ -15,7 +15,7 @@ allprojects {
 
 Add these lines inside your build.gradle (Module: app)
 ```gradle
-implementation 'com.github.JulienHivert:RealTimeGraphView:1.0'
+implementation 'com.github.JulienHivert:RealTimeGraphView:1.0.1'
 ```
 In Your XML 
 ```xml
