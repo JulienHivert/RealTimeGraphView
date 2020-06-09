@@ -49,3 +49,7 @@ For example if the Y of your graph 2 is higher than that of your graph, the draw
 # Video
 
 https://imgur.com/gallery/xy2wsnp
+
+# Improvements
+
+If you have any suggrstions, idea for improvement the lib do not hesitate to fork the lib or make me pull request. If you have any do not hesitate to ask me I will enjoy to help you and work with you 
